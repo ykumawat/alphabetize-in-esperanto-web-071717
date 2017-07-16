@@ -1,3 +1,10 @@
+ENGLISH_ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 def alphabetize(arr)
-  # code here
+  esperanto = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".split('')
+  newary = arr.sort_by{|e|
+    e.split('').map { |letter|
+    esperanto.index(letter)
+    }
+  }
+  newary
 end
